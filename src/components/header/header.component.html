@@ -1,0 +1,52 @@
+<header class="relative z-10 bg-white">
+  <!-- Top promotional banner -->
+  <div class="bg-zinc-100 text-center p-2 text-sm">
+    <p>Save Up to 40%</p>
+    <a routerLink="/sale" class="underline font-semibold">Shop All Our New Markdowns</a>
+  </div>
+
+  <!-- Main navigation -->
+  <nav class="px-4 sm:px-6 lg:px-8 border-b border-zinc-200">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a routerLink="/" class="text-2xl font-bold tracking-wider display-font">AURA</a>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex md:items-center md:space-x-8">
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="text-base font-medium text-zinc-900 hover:text-zinc-600 border-b-2 border-transparent py-4">New & Featured</a>
+        <a routerLink="/category/men" routerLinkActive="active-link" class="text-base font-medium text-zinc-900 hover:text-zinc-600 border-b-2 border-transparent py-4">Men</a>
+        <a routerLink="/category/women" routerLinkActive="active-link" class="text-base font-medium text-zinc-900 hover:text-zinc-600 border-b-2 border-transparent py-4">Women</a>
+        <a routerLink="/category/kids" routerLinkActive="active-link" class="text-base font-medium text-zinc-900 hover:text-zinc-600 border-b-2 border-transparent py-4">Kids</a>
+        <a routerLink="/sale" routerLinkActive="active-link" class="text-base font-medium text-zinc-900 hover:text-zinc-600 border-b-2 border-transparent py-4">Sale</a>
+      </div>
+
+      <!-- Right side actions -->
+      <div class="flex items-center space-x-4">
+        <div class="relative hidden sm:block">
+          <input type="search" placeholder="Search" class="bg-zinc-100 rounded-full py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-black">
+          <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+        </div>
+        <a routerLink="/wishlist" class="relative p-2 rounded-full hover:bg-zinc-100">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+           @if (wishlistCount() > 0) {
+            <span class="absolute top-0 right-0 block h-4 w-4 rounded-full bg-red-600 text-white text-xs flex items-center justify-center ring-2 ring-white">{{ wishlistCount() }}</span>
+           }
+        </a>
+        <a routerLink="/cart" class="relative p-2 rounded-full hover:bg-zinc-100">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.658-.463 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" />
+          </svg>
+          @if (cartCount() > 0) {
+            <span class="absolute top-0 right-0 block h-4 w-4 rounded-full bg-red-600 text-white text-xs flex items-center justify-center ring-2 ring-white">{{ cartCount() }}</span>
+          }
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
