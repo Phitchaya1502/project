@@ -1,0 +1,1061 @@
+:root{
+  --bg:#0b0b0b;
+  --card:#ffffff;
+  --muted:#9aa1a6;
+  --text:#ffffff;
+  --brand:#ff7a00;     /* ส้ม */
+  --brand-dark:#cc6200;
+  --chip-red:#e23b3b;
+  --chip-orange:#ff8a2a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+.topbar{background:#111;color:#bbb;text-align:center;padding:8px;font-size:12px;letter-spacing:.5px}
+
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:#0c0c0c;border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{font-weight:800;letter-spacing:.5px}
+.brand span{color:var(--brand)}
+.menu{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.menu a{opacity:.8}
+.menu a.active,.menu a:hover{opacity:1}
+.nav-right{display:flex;align-items:center;gap:12px}
+.search{width:260px;background:#141414;border:1px solid #222;color:#ddd;padding:10px 12px;border-radius:10px;outline:none}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:10px;border:1px solid #222;background:#141414;color:#ddd}
+.btn-outline{border:1px solid #333;padding:8px 12px;border-radius:10px}
+.welcome{opacity:.8}
+.lang{opacity:.8}
+
+.bg-dark{background:var(--bg)}
+main{padding-bottom:60px}
+
+.hero{position:relative;height:520px;background:url('https://images.unsplash.com/photo-1546549039-1287a6c1f058?q=80&w=2000') center/cover no-repeat;display:flex;align-items:center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.6) 40%,rgba(0,0,0,0) 70%)}
+.hero-text{position:relative;z-index:1;margin-left:60px;max-width:520px}
+.hero h1{font-size:88px;line-height:.9;margin:0 0 8px;font-weight:800}
+.hero p{margin:0 0 16px;letter-spacing:.5px}
+.btn-primary{display:inline-block;background:var(--brand);color:#fff;padding:12px 20px;border-radius:10px;border:none;cursor:pointer;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-dark{background:#121212;color:#fff;padding:12px 20px;border-radius:10px;border:1px solid #222}
+.btn-ghost{background:#ffffff;color:#111;padding:12px 20px;border-radius:10px;border:1px solid #eee}
+
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.feature-card{position:relative;overflow:hidden;border-radius:18px;background:#111;min-height:200px;box-shadow:var(--shadow)}
+.feature-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.9)}
+.feature-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.65))}
+.feature-label{position:absolute;left:18px;bottom:54px;font-size:28px;font-weight:800;line-height:1.05}
+.feature-link{position:absolute;left:18px;bottom:18px;color:#fff;opacity:.9}
+
+.section{margin-top:56px}
+.section-title{text-align:center;font-size:48px;font-weight:800;margin:0}
+.section-subtitle{text-align:center;color:#cfcfcf;letter-spacing:4px;margin:8px 0 26px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.product-card{position:relative;border-radius:18px;background:#151515;overflow:hidden;box-shadow:var(--shadow)}
+.product-card img{width:100%;height:250px;object-fit:cover}
+.badge{position:absolute;left:18px;top:18px;padding:8px 12px;border-radius:10px;font-size:12px;font-weight:700}
+.badge.red{background:var(--chip-red)}
+.badge.orange{background:var(--chip-orange)}
+.product-meta{padding:16px}
+.category{color:#9aa1a6;font-size:12px;letter-spacing:.5px;text-transform:uppercase}
+.product-card .title{display:block;margin:6px 0 8px;font-weight:700}
+.price{font-weight:700}
+.fab{position:absolute;right:16px;bottom:16px;width:36px;height:36px;border-radius:12px;border:0;background:var(--brand);color:#fff;font-size:18px;cursor:pointer}
+.fab:hover{background:var(--brand-dark)}
+
+.auth-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 120px)}
+.auth-card{width:520px;background:var(--card);color:#0b0b0b;border-radius:18px;padding:28px 28px 22px;box-shadow:var(--shadow)}
+.auth-card h2{margin:4px 0 0;font-weight:800}
+.muted{color:#6b6f73}
+.center{text-align:center}
+label{display:block;margin:16px 0 6px;font-weight:600}
+input[type="text"],input[type="email"],input[type="password"]{
+  width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e9eef2;outline:none;background:#fff
+}
+.row-between{display:flex;justify-content:space-between;align-items:center;margin:10px 0 16px}
+.check{display:inline-flex;align-items:center;gap:8px}
+.link{color:#0a66ff}
+.w-100{width:100%}
+.divider{display:flex;align-items:center;gap:12px;color:#9aa1a6;margin:14px 0}
+.divider::before,.divider::after{content:"";height:1px;background:#e7ebf0;flex:1}
+.alert{background:#fff4f4;color:#c21b1b;border:1px solid #ffd7d7;padding:10px 12px;border-radius:12px;margin:10px 0}
+
+.footer{border-top:1px solid rgba(255,255,255,.06);padding:30px 20px;text-align:center;color:#b7bcc0;margin-top:40px}
+
+@media (max-width:1100px){
+  .feature-grid,.product-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:64px}
+}
+@media (max-width:640px){
+  .menu{display:none}
+  .search{display:none}
+  .feature-grid,.product-grid{grid-template-columns:1fr}
+  .hero{height:420px}
+  .hero h1{font-size:48px}
+  .auth-card{width:94%}
+}
+/* TRENDING */
+.hero-trend{
+  position:relative;height:400px;background:url('https://images.unsplash.com/photo-1606813902781-9a46aefb8c31?q=80&w=2000') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-trend .overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);}
+.hero-trend .hero-title{position:relative;font-size:72px;font-weight:800;color:#fff;letter-spacing:6px;z-index:2;}
+.trend-section{margin-top:40px;}
+.trend-card{display:flex;gap:40px;align-items:center;margin-bottom:80px;}
+.trend-left{flex:1;}
+.trend-right{flex:1;position:relative;}
+.trend-right img{border-radius:14px;width:100%;object-fit:cover;}
+.trend-player{position:absolute;bottom:24px;left:24px;color:#fff;font-size:20px;font-weight:700;text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,.8);}
+.breadcrumb{color:#999;font-size:13px;margin-bottom:8px;}
+.trend-left h3{font-size:22px;font-weight:800;margin:0 0 8px;}
+
+/* SERIES */
+.series-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px;}
+.series-card{position:relative;border-radius:14px;overflow:hidden;}
+.series-card img{width:100%;height:240px;object-fit:cover;filter:brightness(0.9);}
+.series-label{position:absolute;bottom:20px;left:20px;color:#fff;}
+.series-label h3{margin:0;font-weight:800;}
+.series-label span{font-size:13px;opacity:.9;}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;}
+.contact-card{background:#fff;color:#111;padding:24px;border-radius:18px;box-shadow:var(--shadow);}
+.contact-card h3{margin-top:0;font-weight:800;}
+.contact-card form label{font-weight:600;}
+.contact-card input,.contact-card textarea{
+  width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:12px;font-family:inherit;
+}
+.contact-card textarea{min-height:100px;resize:vertical;}
+
+/* ADMIN */
+.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px;}
+.admin-card{background:#fff;color:#111;padding:28px;border-radius:16px;box-shadow:var(--shadow);text-align:left;}
+.admin-card h4{margin:12px 0 6px;font-weight:800;}
+.admin-card p{color:#666;font-size:14px;margin:0;}
+.admin-icon{font-size:24px;background:var(--brand);color:#fff;width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+/* ===== Admin / Tables / Modal ===== */
+.admin-toolbar{display:flex;align-items:center;gap:14px;margin:10px 0 18px;flex-wrap:wrap}
+.admin-search{display:flex;gap:10px;align-items:center}
+.admin-search input[type="text"]{min-width:360px;background:#111;border:1px solid #222;color:#ddd}
+.admin-search select{padding:10px;border-radius:10px;border:1px solid #222;background:#111;color:#ddd}
+.admin-counter{margin-left:auto;background:#1a1a1a;border:1px solid #222;padding:10px 12px;border-radius:24px;color:#ccc}
+
+.table-wrap{background:#121212;border:1px solid #1e1e1e;border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:14px 16px;border-bottom:1px solid #1e1e1e;text-align:left}
+.table thead th{background:#101010;color:#d9d9d9;font-weight:700}
+.cell-product{display:flex;gap:12px;align-items:center}
+.thumb{width:26px;height:26px;border-radius:6px;object-fit:cover;background:#222}
+.title-ellipsis{max-width:540px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.small{font-size:12px}
+.chip{display:inline-block;padding:6px 10px;border-radius:20px;background:#1e1e1e;border:1px solid #2b2b2b;color:#cfd3d7;font-size:12px}
+
+.link{color:#ff7a00}
+.link.danger{color:#ff7a00}
+.table-title{padding:14px 16px;border-bottom:1px solid #1e1e1e;font-weight:800}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:16px 0 8px}
+.kpi-card{background:#121212;border:1px solid #1f1f1f;border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.kpi-title{color:#9aa1a6;font-size:12px;letter-spacing:.5px}
+.kpi-value{font-size:28px;font-weight:800;margin-top:4px}
+
+.mt-20{margin-top:20px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+.modal.show{display:flex}
+.modal-card{width:min(760px,96%);background:#fff;color:#111;border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.modal-card.small{width:min(420px,96%)}
+.modal-card h3{margin:0 0 12px;font-weight:800}
+.modal-card label{display:block;margin:10px 0 6px;font-weight:600}
+.modal-card input[type="text"],
+.modal-card input[type="number"],
+.modal-card select{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.modal .btn-primary.danger{background:#e23b3b}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+.contact-card{background:#fff;color:#111;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.contact-card h3{margin:0 0 14px;font-weight:800}
+.contact-card label{display:block;margin:12px 0 6px;font-weight:600}
+.contact-card input,.contact-card textarea{width:100%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px}
+.contact-card textarea{min-height:120px;resize:vertical}
+.alert{background:#fff4f4;border:1px solid #ffd7d7;color:#b42318;padding:10px 12px;border-radius:10px;margin-bottom:12px}
+.alert.success{background:#ecfdf3;border:1px solid #12b76a;color:#067647}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+/* ---------- ADMIN PAGE ---------- */
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.admin-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  padding: 28px;
+  text-align: left;
+  transition: all .2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.12);
+}
+
+.admin-icon {
+  font-size: 22px;
+  background: #ff7a00;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.admin-card h4 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.admin-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+.admin-card a {
+  color: #ff7a00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .admin-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ---------------------------
+   CART PAGE
+---------------------------- */
+.cart-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+.cart-table th, .cart-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.cart-table th {
+  background: #fafafa;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #555;
+}
+
+.cart-table tr:last-child td { border-bottom: none; }
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.product-thumb {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+}
+
+.cart-summary h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cart-summary span { color: #ff7a00; }
+
+.cart-actions {
+  display: flex;
+  gap: 10px;
+}
+.btn-primary {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #cc6200; }
+
+.btn-secondary {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: #f9f9f9; }
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn-remove:hover { color: #d90000; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-info span { font-size: 14px; }
+  .product-thumb { width: 55px; height: 55px; }
+}
+/* CART */
+.cart-table table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06);overflow:hidden}
+.cart-table th,.cart-table td{padding:16px 18px;text-align:left;border-bottom:1px solid #eee;color:#333}
+.cart-table th{background:#fafafa;font-weight:700;text-transform:uppercase;font-size:13px;color:#555}
+.cart-table tr:last-child td{border-bottom:none}
+.product-info{display:flex;align-items:center;gap:15px}
+.product-thumb{width:70px;height:70px;object-fit:cover;border-radius:8px;border:1px solid #eee}
+.cart-summary{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-top:25px;border-top:1px solid #eee}
+.cart-summary h4{font-size:18px;font-weight:700}
+.cart-summary span{color:#ff7a00}
+.cart-actions{display:flex;gap:10px}
+.btn-primary{background:#ff7a00;color:#fff;border:none;padding:10px 18px;border-radius:8px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:#cc6200}
+.btn-secondary{background:#fff;color:#333;border:1px solid #ccc;padding:10px 18px;border-radius:8px;cursor:pointer}
+.btn-secondary:hover{background:#f9f9f9}
+.btn-remove{background:none;border:1px solid #ffd7d7;color:#d90429;padding:6px 10px;border-radius:8px;cursor:pointer}
+.btn-remove:hover{background:#fff4f4}
+.add-cart-form{display:inline}
+/* ------------------------------------
+   MICRO-INTERACTIONS (Hover / Focus)
+-------------------------------------*/
+
+/* ป้องกันเวียนหัวสำหรับคนปิด motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ------- Product card hover ------- */
+.product-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  transform: translateZ(0);             /* เปิด GPU */
+  transition: transform .28s cubic-bezier(.2,.8,.2,1),
+              box-shadow .28s ease, filter .28s ease;
+}
+.product-card:hover{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,.16);
+}
+
+/* รูปซูมเบา ๆ */
+.product-card img{
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), filter .6s;
+}
+.product-card:hover img{
+  transform: scale(1.07);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* badge ลอยขึ้นนิดนึง */
+.badge{ transition: transform .28s, opacity .28s; will-change: transform; }
+.product-card:hover .badge{ transform: translateY(-4px); opacity: .95; }
+
+/* ปุ่ม + โผล่แบบสปริง */
+.fab{
+  transform: translateY(14px) scale(.92);
+  opacity: 0;
+  transition: transform .34s cubic-bezier(.2,.9,.25,1.35), opacity .25s ease;
+}
+.product-card:hover .fab,
+.product-card:focus-within .fab{
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* เอฟเฟกต์กดปุ่มเด้ง */
+.fab:active{ transform: translateY(2px) scale(.96); }
+
+/* ------- Feature card (แบนเนอร์บนสุด) ------- */
+.feature-card{
+  overflow:hidden; border-radius:16px;
+  transform: translateZ(0);
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+}
+.feature-card img{ transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.feature-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(0,0,0,.18);
+}
+.feature-card:hover img{ transform: scale(1.08) rotate(.5deg); }
+
+/* ------- ปุ่มทั่วไป ------- */
+.btn-primary, .btn-secondary{
+  position:relative; overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s, color .18s;
+}
+.btn-primary:hover{ transform: translateY(-2px); box-shadow:0 10px 20px rgba(255,122,0,.25); }
+.btn-secondary:hover{ transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
+
+/* ripple เบา ๆ เวลา hover ปุ่ม */
+.btn-primary::after, .btn-secondary::after{
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(255,255,255,.28), transparent 40%);
+  opacity:0; transition: opacity .25s;
+}
+.btn-primary:hover::after, .btn-secondary:hover::after{ opacity:1; }
+
+/* ------- Cart badge wiggle บนไอคอนตะกร้า ------- */
+@keyframes cart-bounce{
+  0%{ transform: scale(1) translateY(0); }
+  35%{ transform: scale(1.15) translateY(-2px); }
+  60%{ transform: scale(.94) translateY(0); }
+  100%{ transform: scale(1) translateY(0); }
+}
+.cart-badge.bump{ animation: cart-bounce .45s cubic-bezier(.2,.8,.2,1); }
+
+/* ------- โฟกัสเพื่อการเข้าถึง ------- */
+.product-card:focus-within, .feature-card:focus-within, .btn-primary:focus-visible, .fab:focus-visible{
+  outline: 3px solid #ffb37a;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255,122,0,.2);
+}
+
+/* ------- กล่องบน Admin / รายการอื่น ๆ ------- */
+.admin-card{
+  transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s;
+}
+.admin-card:hover{ transform: translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,.14); }
+/* สำหรับ Chrome, Edge, Safari */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;   /* ล้างสไตล์เดิม */
+  height: 14px;
+  width: 14px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14'><line x1='2' y1='2' x2='12' y2='12' stroke='white' stroke-width='2'/><line x1='12' y1='2' x2='2' y2='12' stroke='white' stroke-width='2'/></svg>") no-repeat center;
+  cursor: pointer;
+}
+.feature-link, .learn-link{
+  display:inline-block;
+  color:#ff7a00;
+  font-weight:600;
+  text-decoration:none;
+  transition: all .25s ease;
+}
+.feature-link:hover, .learn-link:hover{
+  color:#fff;
+  transform:translateX(5px);
+}
+.btn-primary{
+  background:#ff7a00;color:#fff;border:none;padding:10px 18px;border-radius:8px;
+  cursor:pointer;transition:all .25s ease;font-weight:600;
+}
+.btn-primary:hover{background:#e36800;transform:translateY(-2px);}
+/* =============================
+   Checkout Page Styles
+   ============================= */
+
+/* โครงหน้า */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+/* กล่องฟอร์ม + สรุป */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ฟอร์ม */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255,122,0,0.15);
+  outline: none;
+}
+
+/* ปุ่ม */
+.btn-primary {
+  background: #ff7a00;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: #ff8f1a;
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(255,122,0,0.3);
+}
+
+/* รายการสินค้า */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+  color: #444;
+}
+
+.card li span:last-child {
+  font-weight: 600;
+}
+
+/* รวมยอด */
+.card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.card .total-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+}
+
+.card .total-line span:last-child {
+  color: #ff7a00;
+}
+
+/* แจ้งเตือน */
+.alert {
+  background: #ffecec;
+  color: #b20000;
+  border: 1px solid #ffbaba;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.alert.success {
+  background: #e8fff0;
+  color: #008a3a;
+  border-color: #bdf0c5;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+}
+/* ปุ่มใน cart */
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* ปุ่มพื้นขาว */
+.btn-secondary {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+  min-width: 160px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: #f6f6f6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ปุ่ม Checkout พิเศษ */
+.btn-checkout {
+  background: #ff7a00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 24px;
+  min-width: 160px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 15px rgba(255,122,0,0.25);
+}
+
+.btn-checkout:hover {
+  background: #ff8c1a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,122,0,0.35);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-secondary,
+  .btn-checkout {
+    width: 100%;
+    min-width: unset;
+  }
+}
+/* ==============================
+   TABLE LAYOUT — ADMIN
+   ============================== */
+
+.table-wrap {
+  background: #121212;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  overflow: hidden;                 /* ตัดส่วนเกินให้เรียบ */
+}
+
+/* ตารางหลัก */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;              /* สำคัญ: คุมความกว้างคอลัมน์ ไม่ให้แตก */
+  background: #181818;
+  color: #eaeaea;
+}
+
+/* ส่วนหัว */
+.table thead th {
+  position: sticky; top: 0; z-index: 2;   /* header ลอย */
+  background: #1f1f1f;
+  color: #d6d6d6;
+  font-weight: 800;
+  text-transform: none;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* เซลล์ */
+.table td {
+  padding: 16px 16px;
+  border-bottom: 1px solid #242424;
+  vertical-align: middle;
+}
+
+/* แถวสลับสี + hover */
+.table tbody tr:nth-child(even) { background: #151515; }
+.table tbody tr:hover { background: #1c1c1c; }
+
+/* มุมหัวตารางโค้ง */
+.table thead th:first-child { border-top-left-radius: 16px; }
+.table thead th:last-child  { border-top-right-radius: 16px; }
+
+/* จัดชิดขวา/กลาง */
+.t-right { text-align: right; }
+.t-center { text-align: center; }
+
+/* ความกว้างคอลัมน์มาตรฐาน (แก้ได้ตามต้องการ) */
+.col-rank   { width: 56px; }
+.col-thumb  { width: 64px; }            /* สำหรับคอลัมน์รูปย่อใน Product */
+.col-group  { width: 170px; }
+.col-tags   { width: 140px; }
+.col-price  { width: 170px; }
+.col-manage { width: 160px; }
+
+/* ภายใน cell: product (รูป + ข้อความ) */
+.cell-product {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;                       /* สำคัญ: ให้ ellipsis ทำงาน */
+}
+
+.thumb {
+  width: 48px; height: 48px; border-radius: 10px; object-fit: cover;
+  background: #2b2b2b;
+}
+
+.title-1line {
+  font-weight: 700; color: #f3f3f3;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sub-muted {
+  margin-top: 4px; font-size: 12px; color: #9aa0a6;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* badge */
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 6px 12px; border-radius: 999px;
+  background: #262626; color: #e0e0e0; font-weight: 800; font-size: 12px;
+  line-height: 1;
+  white-space: nowrap; text-transform: uppercase;
+}
+.badge.tag { background: #242424; color: #ffb15a; }
+
+/* ปุ่ม manage */
+.table .actions {
+  display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;
+}
+.btn-link {
+  color: #ff7a00; text-decoration: none; font-weight: 700;
+}
+.btn-link:hover { text-decoration: underline; }
+
+/* ตัวเลขราคา */
+.price {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* บรรทัดยาวมาก — กันแตก */
+.nowrap    { white-space: nowrap; }
+.ellipsis  { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 1024px) {
+  .col-group { width: 150px; }
+  .col-tags  { width: 120px; }
+  .col-price { width: 150px; }
+}
+
+@media (max-width: 800px) {
+  /* ซ่อนบางคอลัมน์บนจอเล็กเพื่อไม่ให้แตก */
+  .hide-md { display: none; }
+  .table td, .table th { padding: 12px; }
+  .cell-product { grid-template-columns: 40px 1fr; }
+  .thumb { width: 40px; height: 40px; }
+}
+
+@media (max-width: 560px) {
+  /* เปลี่ยนตารางให้อ่านง่ายขึ้นแบบ 2 บรรทัด */
+  .table { table-layout: auto; }
+  .col-group, .col-tags, .col-manage { display: none; } /* เหลือ รูป/ชื่อ/ราคา */
+  .title-1line { white-space: normal; }
+}
+/* แก้เฉพาะ URL ใต้ชื่อสินค้าใน Manage Products */
+.sub-muted {
+  display: block;
+  font-size: 12px;
+  color: #9aa0a6;
+  margin-top: 4px;
+
+  /* ✅ ป้องกันแตกบรรทัด */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* ✅ fix ความสูงไว้ 1 บรรทัด */
+  max-width: 100%;
+  line-height: 1.4;
+}
+/* ปรับขอบเส้นระหว่างแถวให้บางและกลืน */
+.table thead th {
+  border-bottom: 1px solid #1a1a1a;  /* เส้นหัวตารางเข้มขึ้นนิด */
+}
+
+.table td {
+border-bottom: none;
+
+}
+
+/* ปรับให้ลบ “ช่องว่างเล็กๆ” ระหว่างเส้น */
+.table {
+  border-collapse: collapse;
+}
+
+/* เพิ่มความเนียนให้พื้นหลังสลับสี */
+.table tbody tr:nth-child(even) { background: #141414; }
+.table tbody tr:nth-child(odd)  { background: #111111; }
+
+/* แถว hover */
+.table tbody tr:hover {
+  background: #1c1c1c;
+  transition: background 0.2s ease-in-out;
+}
+/* ===============================
+   ACCOUNT PAGE
+   =============================== */
+.account-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.account-card {
+  background: #111;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  color: #fff;
+}
+
+.account-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ff6a00;
+  background: #222;
+  object-fit: cover;
+}
+
+.account-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.account-header .muted {
+  color: #999;
+  font-size: 14px;
+}
+
+.account-info h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ff7a00;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 8px;
+}
+
+.account-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.account-info li {
+  padding: 10px 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.account-info strong {
+  color: #ddd;
+  display: inline-block;
+  width: 100px;
+}
+
+.account-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #ff7a00;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: #ff9b33; }
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #ccc;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  background: #222;
+  border-color: #ff7a00;
+  color: #fff;
+}
+.trending-hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+
+  /* 🔧 ตั้งค่าภาพพื้นหลัง */
+  background-image: url('assets/images/0b5fc6af-3df5-4612-b6f6-2b0365d83270.png');
+  background-repeat: no-repeat;     /* ✅ ไม่ให้ภาพซ้ำ */
+  background-position: center center; /* ✅ จัดให้อยู่กลางทั้งแนวตั้งและแนวนอน */
+  background-size: cover;           /* ✅ ขยายเต็มจอโดยรักษาสัดส่วน */
+  overflow: hidden;
+}
+
+.trending-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* ปรับความมืดให้ตัวหนังสือเด่นขึ้นได้ */
+}
+
+.trending-hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
